@@ -158,7 +158,8 @@ $(document).ready(function () {
 });
 
 $('.center').click(function () {
-    window.location.reload();  
+    window.location.reload();
+   
  })
 
 
@@ -269,7 +270,6 @@ function next() {
 
     songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>`;
     artis.innerHTML = `<span class="artis">${artists[curadoidx]}</span>`;
-    audiosrc.play();
 
 
 }

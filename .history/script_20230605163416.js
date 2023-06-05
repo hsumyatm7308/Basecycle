@@ -158,7 +158,8 @@ $(document).ready(function () {
 });
 
 $('.center').click(function () {
-    window.location.reload();  
+    window.location.reload();
+    audiosrc.removeAttribute('autoplay')
  })
 
 
@@ -251,7 +252,6 @@ function prev() {
     ados(audios[curadoidx]);
     songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>`;
     artis.innerHTML = `<span class="artis">${artists[curadoidx]}</span>`;
-    audiosrc.play();
 
 
 }
@@ -269,7 +269,6 @@ function next() {
 
     songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>`;
     artis.innerHTML = `<span class="artis">${artists[curadoidx]}</span>`;
-    audiosrc.play();
 
 
 }

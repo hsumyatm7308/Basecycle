@@ -158,7 +158,8 @@ $(document).ready(function () {
 });
 
 $('.center').click(function () {
-    window.location.reload();  
+    window.location.reload();
+   
  })
 
 
