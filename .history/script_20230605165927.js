@@ -295,7 +295,6 @@ function updateprogress(p) {
     if (currentTime == duration) {
 
         curadoidx++;
-        
         if (curadoidx > audios.length - 1) {
             curadoidx = 0;
             curtitidx = 0

@@ -290,20 +290,15 @@ function updateprogress(p) {
     timestamp.innerHTML = `<div>${min}:${sec}</div>`;
 
 
-
+    // console.log(currentTime)
+    curadoidx = 0;
 
     if (currentTime == duration) {
-
-        curadoidx++;
-        
-        if (curadoidx > audios.length - 1) {
-            curadoidx = 0;
-            curtitidx = 0
-        }
-
-        ados(audios[curadoidx]);
-        songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>`;
-        artis.innerHTML = `<span class="artis">${artists[curadoidx]}</span>`;
+     
+        console.log(curadoidx++)
+       ados(audios[curadoidx]);
+       songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>`;
+       artis.innerHTML = `<span class="artis">${artists[curadoidx]}</span>`;
         audiosrc.play();
 
     }

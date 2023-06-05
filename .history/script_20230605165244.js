@@ -210,7 +210,7 @@ const audios = ['imagination', 'addictofmagic', 'allweknow', 'dieahappyman', 'dr
 const tits = ['Imagination', 'Addict Of Magic', 'All We Know', 'Die A Happy Man', 'Drunk Text', 'Control', 'Dance With You'];
 const artists = ['Shawn Mendes', 'Picture This', 'Chainsmokers', 'Thomas Rhett', 'Henry Moodie', 'Zoe Wees', 'Brett Young'];
 
-let curadoidx = 0;
+let curadoidx = 1;
 
 
 function ados(ado) {
@@ -290,21 +290,10 @@ function updateprogress(p) {
     timestamp.innerHTML = `<div>${min}:${sec}</div>`;
 
 
-
-
+    // console.log(currentTime)
     if (currentTime == duration) {
-
-        curadoidx++;
-        
-        if (curadoidx > audios.length - 1) {
-            curadoidx = 0;
-            curtitidx = 0
-        }
-
-        ados(audios[curadoidx]);
-        songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>`;
-        artis.innerHTML = `<span class="artis">${artists[curadoidx]}</span>`;
-        audiosrc.play();
+     
+        console.log(curadoidx++)
 
     }
 

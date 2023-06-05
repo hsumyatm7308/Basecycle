@@ -293,17 +293,11 @@ function updateprogress(p) {
 
 
     if (currentTime == duration) {
-
-        curadoidx++;
-        
-        if (curadoidx > audios.length - 1) {
-            curadoidx = 0;
-            curtitidx = 0
-        }
-
-        ados(audios[curadoidx]);
-        songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>`;
-        artis.innerHTML = `<span class="artis">${artists[curadoidx]}</span>`;
+     
+    curadoidx++;
+       ados(audios[curadoidx]);
+       songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>`;
+       artis.innerHTML = `<span class="artis">${artists[curadoidx]}</span>`;
         audiosrc.play();
 
     }

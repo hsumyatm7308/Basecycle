@@ -145,7 +145,7 @@ $(document).ready(function () {
         $('.musiccontainer').css("visibility", "visible");
 
 
-
+      
 
         $('.settingsection').css('visibility', 'hidden');
 
@@ -158,8 +158,8 @@ $(document).ready(function () {
 });
 
 $('.center').click(function () {
-    window.location.reload();
-})
+    window.location.reload();  
+ })
 
 
 digitalid.addEventListener('click', function () {
@@ -290,25 +290,12 @@ function updateprogress(p) {
     timestamp.innerHTML = `<div>${min}:${sec}</div>`;
 
 
+ console.log(currentTime)
+ if(currentTime === duration){
 
-
-    if (currentTime == duration) {
-
-        curadoidx++;
-        
-        if (curadoidx > audios.length - 1) {
-            curadoidx = 0;
-            curtitidx = 0
-        }
-
-        ados(audios[curadoidx]);
-        songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>`;
-        artis.innerHTML = `<span class="artis">${artists[curadoidx]}</span>`;
-        audiosrc.play();
-
-    }
-
-
+ }
+   
+    
 
 }
 
@@ -318,8 +305,6 @@ function skipprogress(e) {
     var clientx = e.offsetX;
     var nowclip = (clientx / width) * audiosrc.duration;
     audiosrc.currentTime = nowclip;
-    audiosrc.play();
-
 }
 
 
