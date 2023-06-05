@@ -121,8 +121,6 @@ $(document).ready(function () {
     //Music 
     $('.musicbtn').click(function () {
 
-        $('.second-container').addClass('formusic')
-
         $('.square').css({
             'display': 'none',
             'border': 'none',
@@ -141,16 +139,6 @@ $(document).ready(function () {
         });
 
         $('.center').addClass('centerhomeani');
-
-        $('.musiccontainer').css("visibility", "visible");
-
-
-        $('.center').click(function () {
-            $(this).removeClass('centerhomeani');
-
-        })
-
-        $('.settingsection').css('visibility', 'hidden');
 
     })
 

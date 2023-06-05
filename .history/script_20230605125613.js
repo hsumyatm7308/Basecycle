@@ -36,11 +36,11 @@ $(document).ready(function () {
         });
 
 
-        if ($(dgidone).hasClass('dgani1p1') && $(dgidtwo).hasClass('dgani2p1')) {
-            $(dgidone).toggleClass('dgani1p1');
-            $(dgidone).toggleClass('dganireverse1');
-            $(dgidtwo).toggleClass('dgani2p1');
-            $(dgidtwo).toggleClass('dganireverse2');
+        if($(dgidone).hasClass('dgani1p1') && $(dgidtwo).hasClass('dgani2p1')){
+        $(dgidone).toggleClass('dgani1p1');
+        $(dgidone).toggleClass('dganireverse1');
+        $(dgidtwo).toggleClass('dgani2p1');
+        $(dgidtwo).toggleClass('dganireverse2');
         }
 
     })
@@ -119,46 +119,46 @@ $(document).ready(function () {
 
 
     //Music 
-    $('.musicbtn').click(function () {
-
-        $('.second-container').addClass('formusic')
-
+    $('.musicbtn').click(function(){
+        
         $('.square').css({
-            'display': 'none',
-            'border': 'none',
-            'background': '#2b2b2b',
-            'transition': 'all .5s'
+            'border':'none',
+            'background':'#2b2b2b',
+            'transition':'all .5s'
 
         });
 
         $('.textaligncenter').css({
-            'display': 'none',
-            'transition': 'all .5s'
+            'display':'none',
+            'transition':'all .5s'
         });
 
         $('.d-block').css({
-            'display': 'block'
+            'display':'block'
         });
 
         $('.center').addClass('centerhomeani');
-
-        $('.musiccontainer').css("visibility", "visible");
-
-
-        $('.center').click(function () {
-            $(this).removeClass('centerhomeani');
-
-        })
-
-        $('.settingsection').css('visibility', 'hidden');
 
     })
 
 
 
-
+   
 
 });
+
+
+
+
+
+
+
+
+
+
+
+// console.log(digital.length)
+
 
 
 
@@ -173,18 +173,27 @@ digitalid.addEventListener('click', function () {
     $('.settingsection').css('visibility', 'hidden');
 
 
-    if (dgidone.classList.contains('dgani1p1') && dgidtwo.classList.contains('dgani2p1')) {
-        dgidone.classList.remove('dganireverse1');
-        dgidtwo.classList.remove('dganireverse2')
+    clockreversefun();
 
-    } else {
-        dgidone.classList.add('dganireverse1')
-        dgidtwo.classList.add('dganireverse2')
-    }
+
 
 
 })
 
+
+function clockreversefun() {
+    digitalid.addEventListener('click', function () {
+        dgidone.classList.toggle('dganireverse1');
+        dgidtwo.classList.toggle('dganireverse2');
+
+        digitalid.addEventListener('click', function () {
+            window.location.reload();
+        })
+
+
+
+    });
+}
 
 
 
@@ -202,54 +211,52 @@ const progresscontainer = document.getElementById('progresscontainer');
 const progressbar = document.getElementById('progressbar');
 const timestamp = document.getElementById('timestamp');
 
-const songslist = document.querySelectorAll('.songs');
-const musiclistmodalcontainer = document.getElementById('musiclistmodalcontainer')
-const menubarlines = document.getElementById('menubarlines')
+const songslist = document.querySelectorAll('.songs')
 
-const audios = ['imagination', 'addictofmagic', 'allweknow', 'dieahappyman', 'drunktext', 'control', 'dancewithyou'];
-const tits = ['Imagination', 'Addict Of Magic', 'All We Know', 'Die A Happy Man', 'Drunk Text', 'Control', 'Dance With You'];
-const artists = ['Shawn Mendes', 'Picture This', 'Chainsmokers', 'Thomas Rhett', 'Henry Moodie', 'Zoe Wees', 'Brett Young'];
+const audios = ['imagination','addictofmagic','allweknow','dieahappyman'];
+const tits = ['Imagination','Addict Of Magic','All We Know','Die A Happy Man'];
+const artists = ['Shawn Mendes','Picture This','Chainsmokers','Thomas Rhett'];
 
 let curadoidx = 0;
 
-
-function ados(ado) {
-    audiosrc.src = `./music/${ado}.mp3`;
-    // console.log(ado)
+ 
+function ados(ado){
+ audiosrc.src = `./music/${ado}.mp3`;
+// console.log(ado)
 }
 
 
-function playado() {
-    playpause.querySelector('i.fa-solid').classList.remove('fa-play');
+function playado(){
+    playpause.querySelector('i.fa-solid').classList.remove('fa-play'); 
     playpause.querySelector('i.fa-solid').classList.add('fa-pause');
     audiosrc.play();
 }
 
-function pauseado() {
-    playpause.querySelector('i.fa-solid').classList.add('fa-play');
+function pauseado(){
+    playpause.querySelector('i.fa-solid').classList.add('fa-play'); 
     playpause.querySelector('i.fa-solid').classList.remove('fa-pause');
     audiosrc.pause();
 }
 
 
-function playpauseado() {
-    if (audiosrc.paused) {
+function playpauseado(){
+    if(audiosrc.paused){
         audiosrc.play();
-    } else {
+    }else{
         audiosrc.pause();
     }
 }
 
-function prev() {
+function prev(){
     curadoidx--;
-
-    if (curadoidx < 0) {
-        curadoidx = audios.length - 1;
-        curtitidx = audios.length - 1;
+   
+    if(curadoidx < 0){
+      curadoidx= audios.length-1;
+      curtitidx = audios.length-1;
     }
-
+  
     ados(audios[curadoidx]);
-    songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>`;
+    songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>` ;
     artis.innerHTML = `<span class="artis">${artists[curadoidx]}</span>`;
 
 
@@ -257,80 +264,57 @@ function prev() {
 
 
 
-function next() {
+function next(){
     curadoidx++;
-
-    if (curadoidx > audios.length - 1) {
+  
+    if(curadoidx > audios.length-1){
         curadoidx = 0;
         curtitidx = 0
     }
     ados(audios[curadoidx]);
-
-    songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>`;
+    
+    songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>` ;
     artis.innerHTML = `<span class="artis">${artists[curadoidx]}</span>`;
 
+ 
+}
+
+function updateprogress(p){
+    var {currentTime} = p.target;
+    var {duration} = p.target;
+   
+   const progresstime = (currentTime/duration)*100;
+   progressbar.style.width = `${progresstime}%`
+
+   var mins = Math.floor(audiosrc.currentTime/60);
+   var secs = Math.floor(audiosrc.currentTime%60);
+
+   var min = mins.toString().padStart(2,'0');
+   var sec = secs.toString().padStart(2,'0')
+
+   timestamp.innerHTML = `<div>${min}:${sec}</div>`;
+   
 
 }
 
-function updateprogress(p) {
-    var { currentTime } = p.target;
-    var { duration } = p.target;
 
-    const progresstime = (currentTime / duration) * 100;
-    progressbar.style.width = `${progresstime}%`
-
-    var mins = Math.floor(audiosrc.currentTime / 60);
-    var secs = Math.floor(audiosrc.currentTime % 60);
-
-    var min = mins.toString().padStart(2, '0');
-    var sec = secs.toString().padStart(2, '0')
-
-    timestamp.innerHTML = `<div>${min}:${sec}</div>`;
-
-
-}
-
-
-function skipprogress(e) {
+function skipprogress(e){
     var width = this.clientWidth;
     var clientx = e.offsetX;
-    var nowclip = (clientx / width) * audiosrc.duration;
+    var nowclip = (clientx/width)*audiosrc.duration;
     audiosrc.currentTime = nowclip;
 }
 
 
 
 
-songslist.forEach(function (songs, idx) {
+audiosrc.addEventListener('timeupdate',updateprogress);
+audiosrc.addEventListener('play',playado);
+audiosrc.addEventListener('pause',pauseado);
 
-    songs.addEventListener("click", function () {
-        curadoidx = idx;
-        ados(audios[curadoidx]);
-        songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>`;
-        artis.innerHTML = `<span class="artis">${artists[curadoidx]}</span>`;
-    })
+playpause.addEventListener('click',playpauseado)
+nextbtn.addEventListener('click',next);
+prevbtn.addEventListener('click',prev);
 
-})
-
-
-audiosrc.addEventListener('timeupdate', updateprogress);
-audiosrc.addEventListener('play', playado);
-audiosrc.addEventListener('pause', pauseado);
-
-playpause.addEventListener('click', playpauseado)
-nextbtn.addEventListener('click', next);
-prevbtn.addEventListener('click', prev);
-
-progresscontainer.addEventListener('click', skipprogress);
-menubarlines.addEventListener('click', function () {
-    musiclistmodalcontainer.classList.toggle('musicmodal')
-
-    if (musiclistmodalcontainer.classList.contains('musicmodal')) {
-        musiclistmodalcontainer.classList.remove('musicmodalreverse')
-
-    } else {
-        musiclistmodalcontainer.classList.add('musicmodalreverse')
-
-    }
-})
-
+progresscontainer.addEventListener('click',skipprogress)
+ 

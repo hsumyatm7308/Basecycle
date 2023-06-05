@@ -121,10 +121,9 @@ $(document).ready(function () {
     //Music 
     $('.musicbtn').click(function () {
 
-        $('.second-container').addClass('formusic')
-
         $('.square').css({
             'display': 'none',
+
             'border': 'none',
             'background': '#2b2b2b',
             'transition': 'all .5s'
@@ -141,16 +140,6 @@ $(document).ready(function () {
         });
 
         $('.center').addClass('centerhomeani');
-
-        $('.musiccontainer').css("visibility", "visible");
-
-
-        $('.center').click(function () {
-            $(this).removeClass('centerhomeani');
-
-        })
-
-        $('.settingsection').css('visibility', 'hidden');
 
     })
 

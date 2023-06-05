@@ -142,15 +142,15 @@ $(document).ready(function () {
 
         $('.center').addClass('centerhomeani');
 
-        $('.musiccontainer').css("visibility", "visible");
+        $('.musiccontainer').css("visibility","visible");
 
 
-        $('.center').click(function () {
-            $(this).removeClass('centerhomeani');
+        $('.center').click(function(){
+        $(this).removeClass('centerhomeani');
 
         })
 
-        $('.settingsection').css('visibility', 'hidden');
+    $('.settingsection').css('visibility', 'hidden');
 
     })
 

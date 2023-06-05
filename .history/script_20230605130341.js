@@ -121,10 +121,7 @@ $(document).ready(function () {
     //Music 
     $('.musicbtn').click(function () {
 
-        $('.second-container').addClass('formusic')
-
         $('.square').css({
-            'display': 'none',
             'border': 'none',
             'background': '#2b2b2b',
             'transition': 'all .5s'
@@ -142,16 +139,6 @@ $(document).ready(function () {
 
         $('.center').addClass('centerhomeani');
 
-        $('.musiccontainer').css("visibility", "visible");
-
-
-        $('.center').click(function () {
-            $(this).removeClass('centerhomeani');
-
-        })
-
-        $('.settingsection').css('visibility', 'hidden');
-
     })
 
 
@@ -159,6 +146,19 @@ $(document).ready(function () {
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+// console.log(digital.length)
+
 
 
 
@@ -173,18 +173,27 @@ digitalid.addEventListener('click', function () {
     $('.settingsection').css('visibility', 'hidden');
 
 
-    if (dgidone.classList.contains('dgani1p1') && dgidtwo.classList.contains('dgani2p1')) {
-        dgidone.classList.remove('dganireverse1');
-        dgidtwo.classList.remove('dganireverse2')
+    clockreversefun();
 
-    } else {
-        dgidone.classList.add('dganireverse1')
-        dgidtwo.classList.add('dganireverse2')
-    }
+
 
 
 })
 
+
+function clockreversefun() {
+    digitalid.addEventListener('click', function () {
+        dgidone.classList.toggle('dganireverse1');
+        dgidtwo.classList.toggle('dganireverse2');
+
+        digitalid.addEventListener('click', function () {
+            window.location.reload();
+        })
+
+
+
+    });
+}
 
 
 
@@ -203,12 +212,10 @@ const progressbar = document.getElementById('progressbar');
 const timestamp = document.getElementById('timestamp');
 
 const songslist = document.querySelectorAll('.songs');
-const musiclistmodalcontainer = document.getElementById('musiclistmodalcontainer')
-const menubarlines = document.getElementById('menubarlines')
 
-const audios = ['imagination', 'addictofmagic', 'allweknow', 'dieahappyman', 'drunktext', 'control', 'dancewithyou'];
-const tits = ['Imagination', 'Addict Of Magic', 'All We Know', 'Die A Happy Man', 'Drunk Text', 'Control', 'Dance With You'];
-const artists = ['Shawn Mendes', 'Picture This', 'Chainsmokers', 'Thomas Rhett', 'Henry Moodie', 'Zoe Wees', 'Brett Young'];
+const audios = ['imagination', 'addictofmagic', 'allweknow', 'dieahappyman'];
+const tits = ['Imagination', 'Addict Of Magic', 'All We Know', 'Die A Happy Man'];
+const artists = ['Shawn Mendes', 'Picture This', 'Chainsmokers', 'Thomas Rhett'];
 
 let curadoidx = 0;
 
@@ -301,16 +308,15 @@ function skipprogress(e) {
 
 
 
-songslist.forEach(function (songs, idx) {
+for (var x = 0; x < songslist.length; x++) {
+    songslist[x].addEventListener('click', function () {
+       
+      console.log(songslist[0])
 
-    songs.addEventListener("click", function () {
-        curadoidx = idx;
-        ados(audios[curadoidx]);
-        songtitle.innerHTML = `<h3>${tits[curadoidx]}</h3>`;
-        artis.innerHTML = `<span class="artis">${artists[curadoidx]}</span>`;
+        
     })
+}
 
-})
 
 
 audiosrc.addEventListener('timeupdate', updateprogress);
@@ -321,16 +327,5 @@ playpause.addEventListener('click', playpauseado)
 nextbtn.addEventListener('click', next);
 prevbtn.addEventListener('click', prev);
 
-progresscontainer.addEventListener('click', skipprogress);
-menubarlines.addEventListener('click', function () {
-    musiclistmodalcontainer.classList.toggle('musicmodal')
-
-    if (musiclistmodalcontainer.classList.contains('musicmodal')) {
-        musiclistmodalcontainer.classList.remove('musicmodalreverse')
-
-    } else {
-        musiclistmodalcontainer.classList.add('musicmodalreverse')
-
-    }
-})
+progresscontainer.addEventListener('click', skipprogress)
 

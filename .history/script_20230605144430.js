@@ -121,10 +121,7 @@ $(document).ready(function () {
     //Music 
     $('.musicbtn').click(function () {
 
-        $('.second-container').addClass('formusic')
-
         $('.square').css({
-            'display': 'none',
             'border': 'none',
             'background': '#2b2b2b',
             'transition': 'all .5s'
@@ -141,16 +138,6 @@ $(document).ready(function () {
         });
 
         $('.center').addClass('centerhomeani');
-
-        $('.musiccontainer').css("visibility", "visible");
-
-
-        $('.center').click(function () {
-            $(this).removeClass('centerhomeani');
-
-        })
-
-        $('.settingsection').css('visibility', 'hidden');
 
     })
 
@@ -173,18 +160,27 @@ digitalid.addEventListener('click', function () {
     $('.settingsection').css('visibility', 'hidden');
 
 
-    if (dgidone.classList.contains('dgani1p1') && dgidtwo.classList.contains('dgani2p1')) {
-        dgidone.classList.remove('dganireverse1');
-        dgidtwo.classList.remove('dganireverse2')
+    clockreversefun();
 
-    } else {
-        dgidone.classList.add('dganireverse1')
-        dgidtwo.classList.add('dganireverse2')
-    }
+
 
 
 })
 
+
+function clockreversefun() {
+    digitalid.addEventListener('click', function () {
+        dgidone.classList.toggle('dganireverse1');
+        dgidtwo.classList.toggle('dganireverse2');
+
+        digitalid.addEventListener('click', function () {
+            window.location.reload();
+        })
+
+
+
+    });
+}
 
 
 
@@ -206,9 +202,9 @@ const songslist = document.querySelectorAll('.songs');
 const musiclistmodalcontainer = document.getElementById('musiclistmodalcontainer')
 const menubarlines = document.getElementById('menubarlines')
 
-const audios = ['imagination', 'addictofmagic', 'allweknow', 'dieahappyman', 'drunktext', 'control', 'dancewithyou'];
-const tits = ['Imagination', 'Addict Of Magic', 'All We Know', 'Die A Happy Man', 'Drunk Text', 'Control', 'Dance With You'];
-const artists = ['Shawn Mendes', 'Picture This', 'Chainsmokers', 'Thomas Rhett', 'Henry Moodie', 'Zoe Wees', 'Brett Young'];
+const audios = ['imagination', 'addictofmagic', 'allweknow', 'dieahappyman', 'drunktext','control','dancewithyou'];
+const tits = ['Imagination', 'Addict Of Magic', 'All We Know', 'Die A Happy Man', 'Drunk Text','Control','Dance With You'];
+const artists = ['Shawn Mendes', 'Picture This', 'Chainsmokers', 'Thomas Rhett', 'Henry Moodie','Zoe Wees','Brett Young'];
 
 let curadoidx = 0;
 
@@ -322,15 +318,15 @@ nextbtn.addEventListener('click', next);
 prevbtn.addEventListener('click', prev);
 
 progresscontainer.addEventListener('click', skipprogress);
-menubarlines.addEventListener('click', function () {
-    musiclistmodalcontainer.classList.toggle('musicmodal')
+menubarlines.addEventListener('click',function(){
+   musiclistmodalcontainer.classList.toggle('musicmodal')
 
-    if (musiclistmodalcontainer.classList.contains('musicmodal')) {
-        musiclistmodalcontainer.classList.remove('musicmodalreverse')
+   if(musiclistmodalcontainer.classList.contains('musicmodal')){
+    musiclistmodalcontainer.classList.remove('musicmodalreverse')
 
-    } else {
-        musiclistmodalcontainer.classList.add('musicmodalreverse')
+   }else{
+    musiclistmodalcontainer.classList.add('musicmodalreverse')
 
-    }
+   }
 })
 
