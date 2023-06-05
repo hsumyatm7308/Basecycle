@@ -157,10 +157,6 @@ $(document).ready(function () {
 
 });
 
-$('.center').click(function () {
-    window.location.reload();
-    
- })
 
 
 digitalid.addEventListener('click', function () {
