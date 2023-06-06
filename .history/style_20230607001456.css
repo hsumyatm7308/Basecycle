@@ -197,21 +197,13 @@ body {
 
     z-index: -1;
 
-    opacity: 1;
-
+    visibility: hidden;
 }
 
-.coverofset{
-    width: 60px;
-    height: 60px;
-    background-color: black;
-    border-radius: 50%;
-    position: absolute;
-    right: 90px;
-    top: -5px;
+.visible {
+    visibility: visible;
 
 }
-
 
 .settiong-items {
     width: 50px;
@@ -1369,7 +1361,7 @@ body {
 }
 
 
-.powtxt {
+.txt {
     transform: translateY(-150%);
     animation: txt 1s forwards ease-in-out;
     animation-delay: 4s;

@@ -28,19 +28,17 @@ $(document).ready(function () {
     });
 
     $('.setting').click(function () {
-        // $('.settingsection').toggleClass('visible');
-        $('.settiong-items').toggleClass('settingani');
+        $('.settingsection').css('visibility', 'visible');
+        $('.settiong-items').addClass('settingani');
         $('.right-top').css('background', '#3d3d3d');
         $('.right-top').mouseleave(function () {
             $('.container-right-top').css('background', '#514f4f')
         });
 
 
+      
 
-
-        if ($('.settiong-items').hasClass('settingani')) {
-            $('.settiong-items').removeClass('setreverse');
-        } else {
+        if($('.settiong-items').hasClass('settingani')){
             $('.settiong-items').addClass('setreverse');
         }
 
@@ -115,20 +113,9 @@ $(document).ready(function () {
         $('.clockhands').addClass('clhandani');
 
 
-        // $('.settingsection').css('visibility', 'hidden');
-
+        $('.settingsection').css('visibility', 'hidden');
         $('.right-top').css('background', '#2e2c2c');
-        $('.container-right-top').css('background', '#3a3939');
-
-
-
-        if ($('.settiong-items').hasClass('settingani')) {
-            $('.settiong-items').addClass('setreverse');
-        } else {
-            $('.settiong-items').removeClass('setreverse');
-        }
-
-
+        $('.container-right-top').css('background', '#3a3939')
 
     });
 
@@ -166,33 +153,28 @@ $(document).ready(function () {
 
 
 
-        if ($('.settiong-items').hasClass('settingani')) {
-            $('.settiong-items').addClass('setreverse');
-        } else {
-            $('.settiong-items').removeClass('setreverse');
-        }
 
-
+        $('.settingsection').css('visibility', 'hidden');
 
     })
 
 
 
     // power 
-    $('.powerbtn').click(function () {
+    $('.powerbtn').click(function(){
         $('.center').addClass('poweronoff');
-        $('.textaligncenter,.clock-items').css('display', 'none');
+        $('.textaligncenter,.clock-items').css('display','none');
 
         $('.container').addClass('containerborder');
         $('.second-container').addClass('secondcontainerborder');
-        $('.square').css('border', '1px solid rgb(0, 242, 255)');
+        $('.square').css('border','1px solid rgb(0, 242, 255)');
 
         $('.right-top').addClass('righttop');
         $('.left-bottom').addClass('leftbottom');
 
-        $('.powersectioncontainer').css('visibility', 'visible')
-        $('.squareforctwo').css('display', 'block');
-        $('.circletwo,.powtxt').css('visibility', 'visible');
+        $('.powersectioncontainer').css('visibility','visible')
+        $('.squareforctwo').css('display','block');
+        $('.circletwo,.txt').css('visibility','visible');
 
     })
 

@@ -40,8 +40,10 @@ $(document).ready(function () {
 
         if ($('.settiong-items').hasClass('settingani')) {
             $('.settiong-items').removeClass('setreverse');
+
         } else {
             $('.settiong-items').addClass('setreverse');
+
         }
 
 
@@ -120,15 +122,15 @@ $(document).ready(function () {
         $('.right-top').css('background', '#2e2c2c');
         $('.container-right-top').css('background', '#3a3939');
 
-
+        
 
         if ($('.settiong-items').hasClass('settingani')) {
-            $('.settiong-items').addClass('setreverse');
-        } else {
             $('.settiong-items').removeClass('setreverse');
+
+        } else {
+            $('.settiong-items').addClass('setreverse');
+
         }
-
-
 
     });
 
@@ -166,13 +168,8 @@ $(document).ready(function () {
 
 
 
-        if ($('.settiong-items').hasClass('settingani')) {
-            $('.settiong-items').addClass('setreverse');
-        } else {
-            $('.settiong-items').removeClass('setreverse');
-        }
 
-
+        $('.settingsection').css('visibility', 'hidden');
 
     })
 
@@ -192,7 +189,7 @@ $(document).ready(function () {
 
         $('.powersectioncontainer').css('visibility', 'visible')
         $('.squareforctwo').css('display', 'block');
-        $('.circletwo,.powtxt').css('visibility', 'visible');
+        $('.circletwo,.txt').css('visibility', 'visible');
 
     })
 

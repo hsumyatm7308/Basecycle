@@ -192,7 +192,7 @@ $(document).ready(function () {
 
         $('.powersectioncontainer').css('visibility', 'visible')
         $('.squareforctwo').css('display', 'block');
-        $('.circletwo,.powtxt').css('visibility', 'visible');
+        $('.circletwo,.txt').css('visibility', 'visible');
 
     })
 

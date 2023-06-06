@@ -28,7 +28,7 @@ $(document).ready(function () {
     });
 
     $('.setting').click(function () {
-        // $('.settingsection').toggleClass('visible');
+        $('.settingsection').css('visibility', 'visible');
         $('.settiong-items').toggleClass('settingani');
         $('.right-top').css('background', '#3d3d3d');
         $('.right-top').mouseleave(function () {
@@ -38,11 +38,15 @@ $(document).ready(function () {
 
 
 
-        if ($('.settiong-items').hasClass('settingani')) {
-            $('.settiong-items').removeClass('setreverse');
-        } else {
-            $('.settiong-items').addClass('setreverse');
-        }
+        // if ($('.settiong-items').hasClass('settingani')) {
+        //     $('.settiong-items').addClass('setreverse');
+        //     // $('.settiong-items').remove('settingani');
+
+        // } else {
+        //     $('.settiong-items').remove('setreverse');
+        //     // $('.settiong-items').addClass('settingani');
+
+        // }
 
 
         if ($(dgidone).hasClass('dgani1p1') && $(dgidtwo).hasClass('dgani2p1')) {
@@ -115,20 +119,9 @@ $(document).ready(function () {
         $('.clockhands').addClass('clhandani');
 
 
-        // $('.settingsection').css('visibility', 'hidden');
-
+        $('.settingsection').css('visibility', 'hidden');
         $('.right-top').css('background', '#2e2c2c');
-        $('.container-right-top').css('background', '#3a3939');
-
-
-
-        if ($('.settiong-items').hasClass('settingani')) {
-            $('.settiong-items').addClass('setreverse');
-        } else {
-            $('.settiong-items').removeClass('setreverse');
-        }
-
-
+        $('.container-right-top').css('background', '#3a3939')
 
     });
 
@@ -166,13 +159,8 @@ $(document).ready(function () {
 
 
 
-        if ($('.settiong-items').hasClass('settingani')) {
-            $('.settiong-items').addClass('setreverse');
-        } else {
-            $('.settiong-items').removeClass('setreverse');
-        }
 
-
+        $('.settingsection').css('visibility', 'hidden');
 
     })
 
@@ -192,7 +180,7 @@ $(document).ready(function () {
 
         $('.powersectioncontainer').css('visibility', 'visible')
         $('.squareforctwo').css('display', 'block');
-        $('.circletwo,.powtxt').css('visibility', 'visible');
+        $('.circletwo,.txt').css('visibility', 'visible');
 
     })
 

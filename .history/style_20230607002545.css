@@ -1369,7 +1369,7 @@ body {
 }
 
 
-.powtxt {
+.txt {
     transform: translateY(-150%);
     animation: txt 1s forwards ease-in-out;
     animation-delay: 4s;

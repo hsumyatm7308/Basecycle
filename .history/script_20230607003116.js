@@ -40,8 +40,10 @@ $(document).ready(function () {
 
         if ($('.settiong-items').hasClass('settingani')) {
             $('.settiong-items').removeClass('setreverse');
+
         } else {
             $('.settiong-items').addClass('setreverse');
+
         }
 
 
@@ -98,7 +100,8 @@ $(document).ready(function () {
         $('#mi').html(`<h1>${minvalue} <span>min</span></h1>`);
         $('#se').html(`<h1>${secvalue} <span>sec</span></h1>`);
 
-    }
+    };
+    
 
     clock();
 
@@ -123,9 +126,11 @@ $(document).ready(function () {
 
 
         if ($('.settiong-items').hasClass('settingani')) {
-            $('.settiong-items').addClass('setreverse');
-        } else {
             $('.settiong-items').removeClass('setreverse');
+
+        } else {
+            $('.settiong-items').addClass('setreverse');
+
         }
 
 
@@ -166,13 +171,8 @@ $(document).ready(function () {
 
 
 
-        if ($('.settiong-items').hasClass('settingani')) {
-            $('.settiong-items').addClass('setreverse');
-        } else {
-            $('.settiong-items').removeClass('setreverse');
-        }
 
-
+        $('.settingsection').css('visibility', 'hidden');
 
     })
 
@@ -192,7 +192,7 @@ $(document).ready(function () {
 
         $('.powersectioncontainer').css('visibility', 'visible')
         $('.squareforctwo').css('display', 'block');
-        $('.circletwo,.powtxt').css('visibility', 'visible');
+        $('.circletwo,.txt').css('visibility', 'visible');
 
     })
 

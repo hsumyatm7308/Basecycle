@@ -189,7 +189,7 @@ body {
 .settingsection {
     width: 300px;
     height: 300px;
-    /* background-color: aliceblue; */
+    background-color: aliceblue;
     position: absolute;
     top: 50px;
     left: 500px;
@@ -202,14 +202,9 @@ body {
 }
 
 .coverofset{
-    width: 60px;
-    height: 60px;
-    background-color: black;
-    border-radius: 50%;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    right: 90px;
-    top: -5px;
-
 }
 
 
@@ -1369,7 +1364,7 @@ body {
 }
 
 
-.powtxt {
+.txt {
     transform: translateY(-150%);
     animation: txt 1s forwards ease-in-out;
     animation-delay: 4s;
