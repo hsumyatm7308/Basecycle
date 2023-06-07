@@ -31,17 +31,8 @@ $(document).ready(function () {
         // $('.settingsection').toggleClass('visible');
         $('.settiong-items').toggleClass('settingani');
         $('.right-top').toggleClass('righttopbg');
-       
- 
-        if($('.right-top').hasClass('righttopbg')){
-            $('.right-top').mouseleave(function () {
-                $('.container-right-top').css('background', '#514f4f')
-            });
-        }else{
-            $('.right-top').mouseleave(function () {
-                $('.container-right-top').css('background', '#3a3939')
-            });
-        }
+       $('.container-right-top').toggleClass('containerrighttopbg')
+
 
 
 

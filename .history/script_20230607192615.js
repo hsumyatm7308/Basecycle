@@ -39,7 +39,7 @@ $(document).ready(function () {
             });
         }else{
             $('.right-top').mouseleave(function () {
-                $('.container-right-top').css('background', '#3a3939')
+                $('.container-right-top').css('background', '#514f4f')
             });
         }
 
